@@ -1,51 +1,21 @@
 using System;
+using StringLibrary;
 
-namespace TriangleApp
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Введіть координати трикутника (x1, y1, x2, y2, x3, y3):");
+        // Використання класу
+        StringClass str1 = new StringClass("Hello");
+        StringClass str2 = new StringClass(str1); // Конструктор копіювання
 
-            // Зчитуємо введення користувача та перетворюємо в double
-            Console.Write("x1 = ");
-            double x1 = double.Parse(Console.ReadLine() ?? "0");
+        Console.WriteLine($"Рядок 1: {str1.Value} (довжина: {str1.Length})");
+        Console.WriteLine($"Рядок 2 (копія): {str2.Value}");
 
-            Console.Write("y1 = ");
-            double y1 = double.Parse(Console.ReadLine() ?? "0");
+        str1.Reverse();
+        Console.WriteLine($"Перевернутий рядок 1: {str1.Value}");
 
-            Console.Write("x2 = ");
-            double x2 = double.Parse(Console.ReadLine() ?? "0");
-
-            Console.Write("y2 = ");
-            double y2 = double.Parse(Console.ReadLine() ?? "0");
-
-            Console.Write("x3 = ");
-            double x3 = double.Parse(Console.ReadLine() ?? "0");
-
-            Console.Write("y3 = ");
-            double y3 = double.Parse(Console.ReadLine() ?? "0");
-
-            // Створюємо об'єкт трикутника з заданими координатами
-            Triangle triangle = new Triangle(x1, y1, x2, y2, x3, y3);
-
-            // Виводимо збережені координати
-            Console.WriteLine("\nТрикутник має координати:");
-            Console.WriteLine($"  A({triangle.X1}, {triangle.Y1})");
-            Console.WriteLine($"  B({triangle.X2}, {triangle.Y2})");
-            Console.WriteLine($"  C({triangle.X3}, {triangle.Y3})");
-
-            // Обчислюємо та виводимо периметр
-            double perimeter = triangle.GetPerimeter();
-            Console.WriteLine($"\nПериметр: {perimeter}");
-
-            // Обчислюємо та виводимо площу
-            double area = triangle.GetArea();
-            Console.WriteLine($"Площа: {area}");
-
-            Console.WriteLine("\nНатисніть будь-яку клавішу для завершення...");
-            Console.ReadKey();
-        }
+        str1.Clear();
+        Console.WriteLine($"Рядок 1 після очищення: {(str1.Value == "" ? "порожній" : str1.Value)}");
     }
 }

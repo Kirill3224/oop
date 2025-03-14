@@ -1,51 +1,30 @@
 using System;
+using StringLibrary;
 
-namespace TriangleApp
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Введіть координати трикутника (x1, y1, x2, y2, x3, y3):");
+        // Використання різних конструкторів
+        StringClass S1 = new StringClass();
+        StringClass S2 = new StringClass("Hello");
+        StringClass S3 = new StringClass(S2); // Конструктор копіювання
 
-            // Зчитуємо введення користувача та перетворюємо в double
-            Console.Write("x1 = ");
-            double x1 = double.Parse(Console.ReadLine() ?? "0");
+        // Вивід початкових значень
+        Console.WriteLine($"S1: \"{S1.Value}\"");
+        Console.WriteLine($"S2: \"{S2.Value}\"");
+        Console.WriteLine($"S3: \"{S3.Value}\"");
 
-            Console.Write("y1 = ");
-            double y1 = double.Parse(Console.ReadLine() ?? "0");
+        // "Вирахувати" з об'єкта S2 символ 'l'
+        StringClass S4 = S2 - 'l';
+        Console.WriteLine($"S2 після видалення 'l': \"{S4.Value}\"");
 
-            Console.Write("x2 = ");
-            double x2 = double.Parse(Console.ReadLine() ?? "0");
+        // "Скласти" об'єкти S2 та S3
+        StringClass S5 = S2 + S3;
+        Console.WriteLine($"S2 + S3: \"{S5.Value}\"");
 
-            Console.Write("y2 = ");
-            double y2 = double.Parse(Console.ReadLine() ?? "0");
-
-            Console.Write("x3 = ");
-            double x3 = double.Parse(Console.ReadLine() ?? "0");
-
-            Console.Write("y3 = ");
-            double y3 = double.Parse(Console.ReadLine() ?? "0");
-
-            // Створюємо об'єкт трикутника з заданими координатами
-            Triangle triangle = new Triangle(x1, y1, x2, y2, x3, y3);
-
-            // Виводимо збережені координати
-            Console.WriteLine("\nТрикутник має координати:");
-            Console.WriteLine($"  A({triangle.X1}, {triangle.Y1})");
-            Console.WriteLine($"  B({triangle.X2}, {triangle.Y2})");
-            Console.WriteLine($"  C({triangle.X3}, {triangle.Y3})");
-
-            // Обчислюємо та виводимо периметр
-            double perimeter = triangle.GetPerimeter();
-            Console.WriteLine($"\nПериметр: {perimeter}");
-
-            // Обчислюємо та виводимо площу
-            double area = triangle.GetArea();
-            Console.WriteLine($"Площа: {area}");
-
-            Console.WriteLine("\nНатисніть будь-яку клавішу для завершення...");
-            Console.ReadKey();
-        }
+        // "Полистити" до S1
+        S1 = S5.Copy();
+        Console.WriteLine($"S1 після присвоєння: \"{S1.Value}\"");
     }
 }
