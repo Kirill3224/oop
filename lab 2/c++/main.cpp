@@ -1,20 +1,19 @@
 #include <iostream>
-#include "StringClass.h"
+#include "String.h"
+#include <string>
+using namespace std;
 
 int main() {
-    // Використання класу
-    StringClass str1("Hello");
-    StringClass str2 = str1; // Виклик конструктора копіювання
-    StringClass str3(std::move(str2)); // Виклик конструктора переміщення
+	setlocale(LC_ALL, "ru");
+	string s;
 
-    std::cout << "Рядок 1: " << str1.getString() << " (довжина: " << str1.getLength() << ")\n";
-    std::cout << "Рядок 3: " << str3.getString() << " (довжина: " << str3.getLength() << ")\n";
+	cout << "Придумайте рядок (на англійській мові): ";
+	getline(cin, s);
 
-    str1.reverse();
-    std::cout << "Перевернутий рядок 1: " << str1.getString() << "\n";
+	String str(s);
+	cout << "Ваш рядок: " << str.getString() << endl;
+	cout << "Довжина рядка: " << str.getLength() << endl;
+	cout << "Перевернутий рядок: " << str.Reversed() << endl;
 
-    str1.clear();
-    std::cout << "Рядок 1 після очищення: " << (str1.getString() ? str1.getString() : "порожній") << "\n";
-
-    return 0;
+	return 0;
 }
