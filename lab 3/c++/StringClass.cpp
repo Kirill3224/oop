@@ -1,80 +1,39 @@
-#include "StringClass.h"
+#include <iostream>
+#include "String.h"
+using namespace std;
 
-// Конструктор за замовчуванням
-StringClass::StringClass() : str(new char[1]), length(0) {
-    str[0] = '\0';
+String::String() : s1(""), s2(""), s3("") {}
+String::String(string& s1, string& s2, string& s3) : s1(s1), s2(s2), s3(s3) {}
+String::String(String& other) : s1(other.s1), s2(other.s2), s3(other.s3) {}
+
+
+string String::getString1() {
+	return s1;
+}
+string String::getString2() {
+	return s2;
+}
+string String::getString3() {
+	return s3;
 }
 
-// Конструктор з параметрами
-StringClass::StringClass(const char* s) {
-    length = strlen(s);
-    str = new char[length + 1];
-    strcpy(str, s);
+string String::getMerge1() {
+	return s2 + s3;
 }
 
-// Конструктор копіювання
-StringClass::StringClass(const StringClass& other) {
-    length = other.length;
-    str = new char[length + 1];
-    strcpy(str, other.str);
+string String::getMerge2() {
+	return getMerge1() + s1;
 }
 
-// Деструктор
-StringClass::~StringClass() {
-    delete[] str;
+size_t String::getLength() {
+	return getMerge2().length();
 }
 
-// Метод отримання довжини рядка
-size_t StringClass::getLength() const {
-    return length;
+void String::removeChar(char ch) {
+	s1.erase(remove(s1.begin(), s1.end(), ch), s1.end());
+	s2.erase(remove(s2.begin(), s2.end(), ch), s2.end());
+	s3.erase(remove(s3.begin(), s3.end(), ch), s3.end());
 }
 
-// Метод отримання значення рядка
-const char* StringClass::getString() const {
-    return str;
-}
 
-// Перевантаження оператора +
-StringClass StringClass::operator+(const StringClass& other) const {
-    size_t newLength = length + other.length;
-    char* newStr = new char[newLength + 1];
 
-    strcpy(newStr, str);
-    strcat(newStr, other.str);
-
-    StringClass result(newStr);
-    delete[] newStr;
-    return result;
-}
-
-// Перевантаження оператора -
-StringClass StringClass::operator-(char ch) const {
-    size_t newLength = length;
-    char* newStr = new char[length + 1];
-    size_t index = 0;
-
-    for (size_t i = 0; i < length; i++) {
-        if (str[i] != ch) {
-            newStr[index++] = str[i];
-        }
-        else {
-            newLength--;
-        }
-    }
-    newStr[newLength] = '\0';
-
-    StringClass result(newStr);
-    delete[] newStr;
-    return result;
-}
-
-// Присвоєння (копіювання)
-StringClass& StringClass::operator=(const StringClass& other) {
-    if (this != &other) {
-        delete[] str;
-        length = other.length;
-        str = new char[length + 1];
-        strcpy(str, other.str);
-    }
-    return *this;
-}

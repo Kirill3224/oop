@@ -1,28 +1,32 @@
 #include <iostream>
-#include "StringClass.h"
+#include "String.h"
+#include <string>
+using namespace std;
 
 int main() {
-    // Використання різних конструкторів
-    StringClass S1;
-    StringClass S2("Hello");
-    StringClass S3 = S2; // Виклик конструктора копіювання
+	setlocale(LC_ALL, "ru");
+	string s1, s2, s3;
 
-    // Вивід початкових значень
-    std::cout << "S1: " << S1.getString() << std::endl;
-    std::cout << "S2: " << S2.getString() << std::endl;
-    std::cout << "S3: " << S3.getString() << std::endl;
+	cout << "Придумайте перший рядок (на англійській мові): ";
+	getline(cin, s1);
 
-    // "Вирахувати" з об'єкта S2 символ 'l'
-    StringClass S4 = S2 - 'l';
-    std::cout << "S2 після видалення 'l': " << S4.getString() << std::endl;
+	cout << "Придумайте другий рядок (на англійській мові): ";
+	getline(cin, s2);
 
-    // "Скласти" об'єкти S2 та S3
-    StringClass S5 = S2 + S3;
-    std::cout << "S2 + S3: " << S5.getString() << std::endl;
+	cout << "Придумайте третій рядок (на англійській мові): ";
+	getline(cin, s3);
 
-    // "Полистити" до S1
-    S1 = S5;
-    std::cout << "S1 після присвоєння: " << S1.getString() << std::endl;
+	String str(s1, s2, s3);
 
-    return 0;
+
+	cout << "Ваші рядки: " << str.getString1() << ", " << str.getString2() << ", " << str.getString3() << endl;
+
+	str.removeChar('#');
+
+	cout << "Результат складання рядку 2 та 3: " << str.getMerge1() << endl;
+	cout << "Результат додавання сумми рядків 2 та 3 до 1 рядка: " << str.getMerge2() << endl;
+	cout << "Довжина об'єднаного рядка: " << str.getLength() << endl;
+
+
+	return 0;
 }

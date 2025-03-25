@@ -1,41 +1,30 @@
-#ifndef STRINGCLASS_H
-#define STRINGCLASS_H
-
 #include <iostream>
-#include <cstring>
 
-class StringClass {
+#ifndef string_h
+#define string_h
+using namespace std;
+
+class String {
 private:
-    char* str;
-    size_t length;
+	string s1;
+	string s2;
+	string s3;
+
 
 public:
-    // Конструктор за замовчуванням
-    StringClass();
+	String();
+	String(string& s1, string& s2, string& s3);
+	String(String& other);
 
-    // Конструктор з параметрами
-    StringClass(const char* s);
+	size_t getLength();
+	string getString1();
+	string getString2();
+	string getString3();
+	string getMerge1();
+	string getMerge2();
 
-    // Конструктор копіювання
-    StringClass(const StringClass& other);
+	void removeChar(char ch);
 
-    // Деструктор
-    ~StringClass();
-
-    // Метод обчислення довжини рядка
-    size_t getLength() const;
-
-    // Метод отримання значення рядка
-    const char* getString() const;
-
-    // Перевантаження оператора +
-    StringClass operator+(const StringClass& other) const;
-
-    // Перевантаження оператора -
-    StringClass operator-(char ch) const;
-
-    // Присвоєння (копіювання)
-    StringClass& operator=(const StringClass& other);
 };
 
 #endif
