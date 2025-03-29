@@ -1,30 +1,61 @@
 using System;
-using StringLibrary;
+
+class StringHandler
+{
+    private string s1;
+    private string s2;
+    private string s3;
+
+    public StringHandler()
+    {
+        s1 = "";
+        s2 = "";
+        s3 = "";
+    }
+
+    public StringHandler(string s1, string s2, string s3)
+    {
+        this.s1 = s1;
+        this.s2 = s2;
+        this.s3 = s3;
+    }
+
+    public string GetString1() => s1;
+    public string GetString2() => s2;
+    public string GetString3() => s3;
+    public string GetMerge1() => s2 + s3;
+    public string GetMerge2() => GetMerge1() + s1;
+    public int GetLength() => GetMerge2().Length;
+
+    public void RemoveChar(char ch)
+    {
+        s1 = s1.Replace(ch.ToString(), "");
+        s2 = s2.Replace(ch.ToString(), "");
+        s3 = s3.Replace(ch.ToString(), "");
+    }
+}
 
 class Program
 {
     static void Main()
     {
-        // Використання різних конструкторів
-        StringClass S1 = new StringClass();
-        StringClass S2 = new StringClass("Hello");
-        StringClass S3 = new StringClass(S2); // Конструктор копіювання
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+        Console.Write("Придумайте перший рядок (на англійській мові): ");
+        string s1 = Console.ReadLine();
 
-        // Вивід початкових значень
-        Console.WriteLine($"S1: \"{S1.Value}\"");
-        Console.WriteLine($"S2: \"{S2.Value}\"");
-        Console.WriteLine($"S3: \"{S3.Value}\"");
+        Console.Write("Придумайте другий рядок (на англійській мові): ");
+        string s2 = Console.ReadLine();
 
-        // "Вирахувати" з об'єкта S2 символ 'l'
-        StringClass S4 = S2 - 'l';
-        Console.WriteLine($"S2 після видалення 'l': \"{S4.Value}\"");
+        Console.Write("Придумайте третій рядок (на англійській мові): ");
+        string s3 = Console.ReadLine();
 
-        // "Скласти" об'єкти S2 та S3
-        StringClass S5 = S2 + S3;
-        Console.WriteLine($"S2 + S3: \"{S5.Value}\"");
+        StringHandler str = new StringHandler(s1, s2, s3);
 
-        // "Полистити" до S1
-        S1 = S5.Copy();
-        Console.WriteLine($"S1 після присвоєння: \"{S1.Value}\"");
+        Console.WriteLine($"Ваші рядки: {str.GetString1()}, {str.GetString2()}, {str.GetString3()}");
+        str.RemoveChar('#');
+
+        Console.WriteLine($"Результат складання рядку 2 та 3: {str.GetMerge1()}");
+        Console.WriteLine($"Результат додавання сумми рядків 2 та 3 до 1 рядка: {str.GetMerge2()}");
+        Console.WriteLine($"Довжина об'єднаного рядка: {str.GetLength()}");
     }
 }
