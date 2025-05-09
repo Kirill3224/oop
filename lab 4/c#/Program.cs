@@ -3,14 +3,14 @@ using System.Drawing;
 
 namespace ConsoleApp5
 {
-    class Triangle
+    class Figure
     {
-        private Point A;
-        private Point B;
-        private Point C;
-        private int a, b, c;
+        protected Point A;
+        protected Point B;
+        protected Point C;
+        protected int a, b, c;
 
-        public Triangle(int ax, int ay, int bx, int by, int cx, int cy, int a, int b, int c)
+        protected Figure(int ax, int ay, int bx, int by, int cx, int cy, int a, int b, int c)
         {
             A = new Point(ax, ay);
             B = new Point(bx, by);
@@ -20,6 +20,11 @@ namespace ConsoleApp5
             this.c = c;
 
         }
+    }
+    class Triangle : Figure
+    {
+
+        public Triangle(int ax, int ay, int bx, int by, int cx, int cy, int a, int b, int c) : base(ax, ay, bx, by, cx, cy, a, b, c) { }
 
         public int GetPerimeter()
         {

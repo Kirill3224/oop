@@ -36,5 +36,5 @@ int main() {
 	cout << "                          " << endl;
 
 	cout << "Периметр: " << triangle.getPerimeter() << endl;
-	cout << "Периметр: " << triangle.getArea() << endl;
+	cout << "Площа: " << triangle.getArea() << endl;
 }

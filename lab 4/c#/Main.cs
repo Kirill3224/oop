@@ -6,31 +6,30 @@ namespace ConsoleApp5
     {
         static void Main()
         {
+            int ax, ay, bx, by, cx, cy, a, b, c;
 
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.WriteLine("Введіть довжину сторони a");
-            int a = Convert.ToInt32(Console.ReadLine());
+            a = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Введіть довжину сторони b");
-            int b = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Введіть довжину сторони c");
-            int c = Convert.ToInt32(Console.ReadLine());
+            c = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Введіть координати точки A (x,y)");
-            int ax = Convert.ToInt32(Console.ReadLine());
-            int ay = Convert.ToInt32(Console.ReadLine());
+            ax = Convert.ToInt32(Console.ReadLine());
+            ay = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Введіть координати точки B (x,y)");
-            int bx = Convert.ToInt32(Console.ReadLine());
-            int by = Convert.ToInt32(Console.ReadLine());
+            bx = Convert.ToInt32(Console.ReadLine());
+            by = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Введіть координати точки C (x,y)");
-            int cx = Convert.ToInt32(Console.ReadLine());
-            int cy = Convert.ToInt32(Console.ReadLine());
+            cx = Convert.ToInt32(Console.ReadLine());
+            cy = Convert.ToInt32(Console.ReadLine());
 
             Triangle triangle = new Triangle(ax, ay, bx, by, cx, cy, a, b, c);
-            Console.WriteLine($"Координати точок вершин: A ({ax};{ay}), B ({bx};{by}), C ({cx};{cy})");
-            Console.WriteLine($"Довжини сторін: a = {a}, b = {b}, c = {c}");
-            Console.WriteLine($"                                 ");
-            Console.WriteLine($"Перемитер трикутника дорівнює {triangle.GetPerimeter()}");
-            Console.WriteLine($"Площа трикутника дорівнює {triangle.GetArea()}");
+
+            Console.WriteLine($"Периметер трикутника = {triangle.GetPerimeter()}");
+            Console.WriteLine($"Площа трикутника = {triangle.GetArea()}");
         }
     }
 }

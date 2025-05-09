@@ -3,13 +3,11 @@
 #include "Triangle.h"
 using namespace std;
 
-Triangle::Triangle() : a(0), b(0), c(0), A(), B(), C() {}
+Figure::Figure() : a(0), b(0), c(0), A(), B(), C() {}
+Figure::Figure(double a, double b, double c, double ax, double ay, double bx, double by, double cx, double cy) : a(a), b(b), c(c), A(ax&& ay), B(bx&& by), C(cx&& cy) {}
 
-Triangle::Triangle(double a, double b, double c,
-	double ax, double ay,
-	double bx, double by,
-	double cx, double cy)
-	: a(a), b(b), c(c), A(ax&& ay), B(bx&& by), C(cx&& cy) {}
+Triangle::Triangle(double a, double b, double c, double ax, double ay, double bx, double by, double cx, double cy) : Figure(a, b, c, ax, ay, bx, by, cx, cy) {}
+
 
 double Triangle::getPerimeter() const {
 	return a + b + c;
