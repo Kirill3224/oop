@@ -1,21 +1,45 @@
-using System;
-using StringLibrary;
-
-class Program
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+ 
+namespace ConsoleApp7
 {
-    static void Main()
+    class String
     {
-        // Використання класу
-        StringClass str1 = new StringClass("Hello");
-        StringClass str2 = new StringClass(str1); // Конструктор копіювання
+        private string a;
 
-        Console.WriteLine($"Рядок 1: {str1.Value} (довжина: {str1.Length})");
-        Console.WriteLine($"Рядок 2 (копія): {str2.Value}");
+        public String()
+        {
+            a = "";
+        }
 
-        str1.Reverse();
-        Console.WriteLine($"Перевернутий рядок 1: {str1.Value}");
+        public String(string A)
+        {
+            a = A;
+        }
 
-        str1.Clear();
-        Console.WriteLine($"Рядок 1 після очищення: {(str1.Value == "" ? "порожній" : str1.Value)}");
+        public String(String other)
+        {
+            a = other.a;
+        }
+
+        public string stringReturn()
+        {
+            return a;
+        }
+        public int stringLength()
+        {
+            return a.Length;
+        }
+
+        public string stringReversed()
+        {
+            string reversed = new string(a.Reverse().ToArray());
+            return reversed;
+        }
+
+        ~String()
+        {
+
+        }
     }
 }

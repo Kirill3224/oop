@@ -1,52 +1,32 @@
-using System;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
-class StringClass
+namespace ConsoleApp7
 {
-    private string s;
-
-    public StringClass()
+    class String
     {
-        s = "";
-    }
+        private string a;
 
-    public StringClass(string s)
-    {
-        this.s = s;
-    }
+        public String(string A)
+        {
+            a = A;
+        }
 
-    public StringClass(StringClass other)
-    {
-        s = other.s;
-    }
+        public string stringReturn()
+        {
+            return a;
+        }
+        public int stringLength()
+        {
+            return a.Length;
+        }
 
-    public int GetLength()
-    {
-        return s.Length;
-    }
+        public string stringReversed()
+        {
+            string reversed = new string(a.Reverse().ToArray());
+            return reversed;
+        }
 
-    public string Reversed()
-    {
-        char[] charArray = s.ToCharArray();
-        Array.Reverse(charArray);
-        return new string(charArray);
-    }
 
-    public string GetString()
-    {
-        return s;
-    }
-}
-
-class Program
-{
-    static void Main()
-    {
-        Console.Write("Придумайте рядок (на англійській мові): ");
-        string input = Console.ReadLine();
-
-        StringClass str = new StringClass(input);
-        Console.WriteLine("Ваш рядок: " + str.GetString());
-        Console.WriteLine("Довжина рядка: " + str.GetLength());
-        Console.WriteLine("Перевернутий рядок: " + str.Reversed());
     }
 }
