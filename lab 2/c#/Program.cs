@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
- 
+
 namespace ConsoleApp7
 {
     class String
@@ -22,14 +22,9 @@ namespace ConsoleApp7
             a = other.a;
         }
 
-        public string stringReturn()
-        {
-            return a;
-        }
-        public int stringLength()
-        {
-            return a.Length;
-        }
+        public string stringReturn() => a;
+
+        public int stringLength() => a.Length;
 
         public string stringReversed()
         {
@@ -39,7 +34,19 @@ namespace ConsoleApp7
 
         ~String()
         {
+        }
 
+        static void Main()
+        {
+
+            Console.WriteLine("Введіть ваш рядок: ");
+            string a = Console.ReadLine();
+
+            String str = new String(a);
+
+            Console.WriteLine($"Ваш рядок: {str.stringReturn()}");
+            Console.WriteLine($"Перевернутий рядок: {str.stringReversed()}");
+            Console.WriteLine($"Ваш рядок: {str.stringLength()}");
         }
     }
 }

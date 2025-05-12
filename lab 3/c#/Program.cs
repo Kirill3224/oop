@@ -1,5 +1,4 @@
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Reflection.Metadata;
 
 namespace ConsoleApp7
@@ -32,13 +31,12 @@ namespace ConsoleApp7
 
         }
 
-
         public string aReturn() => s1;
         public string bReturn() => s2;
         public string cReturn() => s3;
         public string aGetMerge() => s3 + s2;
         public string bGetMerge() => s1 + aGetMerge();
-
+        public int stringLength() => bGetMerge().Length;
 
         public void RemoveChar(char ch)
         {
@@ -47,17 +45,32 @@ namespace ConsoleApp7
             s3 = s3.Replace(ch.ToString(), "");
         }
 
-
-        public int stringLength()
-        {
-            return bGetMerge().Length;
-        }
-
-
-
         ~String()
         {
 
         }
+
+        static void Main()
+        {
+            Console.WriteLine("Введіть перший ваш рядок: ");
+            string s1 = Console.ReadLine();
+
+            Console.WriteLine("Введіть другий ваш рядок: ");
+            string s2 = Console.ReadLine();
+
+            Console.WriteLine("Введіть третій ваш рядок: ");
+            string s3 = Console.ReadLine();
+
+            String str = new String(s1, s2, s3);
+            str.RemoveChar('#');
+
+            Console.WriteLine($"Ваш рядок: {str.aReturn()}, {str.bReturn()}, {str.cReturn()}");
+            Console.WriteLine("                                  ");
+            Console.WriteLine($"2 рядок + 3 рядок = {str.aGetMerge()}");
+            Console.WriteLine($"Результат минулої дії + 1 рядок = {str.bGetMerge()}");
+            Console.WriteLine("                                  ");
+            Console.WriteLine($"Довжина фінальгого рядка: {str.stringLength()}");
+        }
+
     }
 }
