@@ -1,9 +1,10 @@
 #include <iostream>
+#include <windows.h>
 #include "Triangle.h"
 using namespace std;
 
 int main() {
-	setlocale(LC_ALL, "ru");
+	SetConsoleOutputCP(65001);
 	double a, b, c;
 	double ax, ay, bx, by, cx, cy;
 

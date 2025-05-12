@@ -35,18 +35,5 @@ namespace ConsoleApp7
         ~String()
         {
         }
-
-        static void Main()
-        {
-
-            Console.WriteLine("Введіть ваш рядок: ");
-            string a = Console.ReadLine();
-
-            String str = new String(a);
-
-            Console.WriteLine($"Ваш рядок: {str.stringReturn()}");
-            Console.WriteLine($"Перевернутий рядок: {str.stringReversed()}");
-            Console.WriteLine($"Ваш рядок: {str.stringLength()}");
-        }
     }
 }

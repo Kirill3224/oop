@@ -1,10 +1,10 @@
 #include <iostream>
 #include "String.h"
-#include <string>
+#include <windows.h>
 using namespace std;
 
 int main() {
-	setlocale(LC_ALL, "ru");
+	SetConsoleOutputCP(CP_UTF8);
 	string s1, s2, s3;
 
 	cout << "Придумайте перший рядок (на англійській мові): ";
@@ -18,13 +18,11 @@ int main() {
 
 	String str(s1, s2, s3);
 
+	cout << "Ваші рядки: " << str.getString(s1, s2) << " " << str.getString(s3) << endl;
 
-	cout << "Ваші рядки: " << str.getString1() << ", " << str.getString2() << ", " << str.getString3() << endl;
 
-	str.removeChar('#');
-
-	cout << "Результат складання рядку 2 та 3: " << str.getMerge1() << endl;
-	cout << "Результат додавання сумми рядків 2 та 3 до 1 рядка: " << str.getMerge2() << endl;
+	cout << "Результат складання рядку 3 та 2: " << str.getMerge(s3, s2) << endl;
+	cout << "Результат додавання сумми рядків 2 та 3 до 1 рядка: " << str.getMerge(s1) << endl;
 	cout << "Довжина об'єднаного рядка: " << str.getLength() << endl;
 
 
