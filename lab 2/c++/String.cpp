@@ -5,7 +5,6 @@ using namespace std;
 String::String() : s(s) {}
 String::String(string s) : s(s) {}
 String::String(String& other) : s(other.s) {}
-String::String(String&& other) noexcept : s(move(other.s)) {}
 String::~String() {}
 
 string String::getString() {
