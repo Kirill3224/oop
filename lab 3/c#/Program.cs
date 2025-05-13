@@ -31,19 +31,22 @@ namespace ConsoleApp7
 
         }
 
-        public string Return(string a, string b) => s1 + " " + s2;
-        public string Return(string c) => s3;
-        public string GetMerge(string s3, string s2) => s3 + s2;
-        public string GetMerge(string s1) => s1 + GetMerge(s3, s2);
-
-        public int stringLength() => GetMerge(s1).Length;
-
-        public void RemoveChar(char ch)
+        char ch = '#';
+        public string withoutChar(string s3, string s2)
         {
-            s1 = s1.Replace(ch.ToString(), "");
-            s2 = s2.Replace(ch.ToString(), "");
-            s3 = s3.Replace(ch.ToString(), "");
+            return s3.Replace(ch.ToString(), "") + s2.Replace(ch.ToString(), "");
         }
+
+        public string withoutChar(string s1)
+        {
+            return s1.Replace(ch.ToString(), "");
+        }
+
+        public string Return(string a, string b) =>  s1 + " " + s2;
+        public string Return(string c) => s3;
+        public string GetMerge(string s3, string s2) =>  withoutChar(s3, s2);
+        public string GetMerge(string s1) => withoutChar(s1) + GetMerge(s3, s2);
+        public int stringLength() => GetMerge(s1).Length;
 
         ~String()
         {

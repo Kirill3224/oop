@@ -20,7 +20,6 @@ namespace ConsoleApp7
             string s3 = Console.ReadLine();
 
             String str = new String(s1, s2, s3);
-            str.RemoveChar('#');
 
             Console.WriteLine("                                  ");
             Console.WriteLine($"Ваші рядки: {str.Return(s1, s2)} {str.Return(s3)}");
