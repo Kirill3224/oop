@@ -9,10 +9,9 @@ private:
 	string s;
 
 public:
-	String(); // За замовчуванням
-	String(string s); // З параметром
-	String(String& other); // Копіюючий
-	String(String&& other) noexcept; // Переміщення
+	String();
+	String(string s);
+	String(String& other);
 	~String();
 
 	size_t getLength();
