@@ -48,12 +48,6 @@ class TextContainer
         lines.Add(new TextLine(content));
     }
 
-    public void removeLine(int index)
-    {
-        if (index >= 0 && index < lines.Count)
-            lines.RemoveAt(index);
-    }
-
     public void cleanAll()
     {
         foreach (var line in lines)
