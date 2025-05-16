@@ -4,36 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp9
+namespace ConsoleApp7
 {
     class Program
     {
         static void Main()
         {
-            try
-            {
-                Calculate[] numbers = new Calculate[3];
-                {
-                    numbers[0] = new Calculate(2, 5, 8);
-                    numbers[1] = new Calculate(3, 6, 12);
-                    numbers[2] = new Calculate(4, 7, 16);
-                };
+            TextContainer container = new TextContainer();
 
-                foreach (var calc in numbers)
-                {
-                    double result = calc.Result();
+            container.addLine("   Це    приклад    рядка   з   пробілами.   ");
+            container.addLine("  Ще  один   рядок  для   тесту. ");
+            container.addLine("Без   змін, але   з   лишніми    пробілами. ");
+            Console.WriteLine("До очищення:");
+            container.printAll();
 
-                    Console.WriteLine($"Результат: {result}");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Помилка: {ex.Message}");
-            }
-
-
+            container.cleanAll();
+            Console.WriteLine("  ");
+            Console.WriteLine("Після очищення:");
+            container.printAll();
         }
-
     }
 }
-
