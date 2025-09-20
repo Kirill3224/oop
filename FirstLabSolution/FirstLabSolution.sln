@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstLab.Console", "FirstLab.Console\FirstLab.Console.csproj", "{722A332A-6AF2-4637-9D90-317C44B38A2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstLab.Core", "FirstLab.Core\FirstLab.Core.csproj", "{F649F247-0ED2-4DE7-A883-4A21CA809FE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstLab.Data", "FirstLab.Data\FirstLab.Data.csproj", "{C46CA243-A912-487A-83D9-551A1C35F418}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{722A332A-6AF2-4637-9D90-317C44B38A2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{722A332A-6AF2-4637-9D90-317C44B38A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{722A332A-6AF2-4637-9D90-317C44B38A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{722A332A-6AF2-4637-9D90-317C44B38A2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F649F247-0ED2-4DE7-A883-4A21CA809FE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F649F247-0ED2-4DE7-A883-4A21CA809FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F649F247-0ED2-4DE7-A883-4A21CA809FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F649F247-0ED2-4DE7-A883-4A21CA809FE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C46CA243-A912-487A-83D9-551A1C35F418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C46CA243-A912-487A-83D9-551A1C35F418}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C46CA243-A912-487A-83D9-551A1C35F418}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C46CA243-A912-487A-83D9-551A1C35F418}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

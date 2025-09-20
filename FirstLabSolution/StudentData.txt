@@ -1,0 +1,10 @@
+Student VasiaPupkin { "FirstName": "Vasia", "LastName": "Pupkin", "Age": "17", "Course": "1", "StudentId": "KB123456", "City": "Kyiv", "PassportId": "AA123456" };
+Student OlgaIvanova { "FirstName": "Olga", "LastName": "Ivanova", "Age": "18", "Course": "2", "StudentId": "KB654321", "City": "Lviv", "PassportId": "BB654321" };
+Student IvanPetrushkin { "FirstName": "Ivan", "LastName": "Petrushkin", "Age": "21", "Course": "4", "StudentId": "KB653321", "City": "Kharkiv", "PassportId": "DD212121" };
+TaxiDriver IvanPetrov { "FirstName": "Ivan", "LastName": "Petrov", "Age": "35" };
+TaxiDriver SergeySidorov { "FirstName": "Sergey", "LastName": "Sidorov", "Age": "40" };
+Acrobat AnnaKozlova { "FirstName": "Anna", "LastName": "Kozlova", "Age": "28" };
+Acrobat DmitrySmirnov { "FirstName": "Dmitry", "LastName": "Smirnov", "Age": "30" };
+Student VasiaPupkin { "FirstName": "Vasia", "LastName": "Pupkin", "Age": "17", "Course": "1", "StudentId": "KB123456", "City": "Kyiv", "PassportId": "LE345987" };
+Student OlgaIvanova { "FirstName": "Olga", "LastName": "Ivanova", "Age": "18", "Course": "1", "StudentId": "KB654321", "City": "Kharkiv", "PassportId": "SU017345" };
+Student IvanPetrushkin { "FirstName": "Ivan", "LastName": "Petrushkin", "Age": "21", "Course": "1", "StudentId": "KB653321", "City": "Odessa", "PassportId": "OO891054" };
