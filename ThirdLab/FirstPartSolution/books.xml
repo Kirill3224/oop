@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Book>
+    <SerialNumber>CSH-001</SerialNumber>
+    <Title>Так казав Заратустра</Title>
+    <Year>1883</Year>
+    <Price>250</Price>
+    <CopiesCount>200</CopiesCount>
+  </Book>
+  <Book>
+    <SerialNumber>DB-39</SerialNumber>
+    <Title>Бази даних</Title>
+    <Year>2024</Year>
+    <Price>140</Price>
+    <CopiesCount>350</CopiesCount>
+  </Book>
+  <Book>
+    <SerialNumber>WEB-041</SerialNumber>
+    <Title>Веб-програмування</Title>
+    <Year>2021</Year>
+    <Price>90</Price>
+    <CopiesCount>1000</CopiesCount>
+  </Book>
+  <Book>
+    <SerialNumber>ALG-029</SerialNumber>
+    <Title>Алгоритми та структури даних</Title>
+    <Year>2023</Year>
+    <Price>567</Price>
+    <CopiesCount>150</CopiesCount>
+  </Book>
+</ArrayOfBook>
