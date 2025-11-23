@@ -1,0 +1,26 @@
+[
+  {
+    "FirstName": "Vasia",
+    "LastName": "Pupkin",
+    "Course": 1,
+    "StudentId": "KB123456",
+    "ArrivalCity": "Kyiv",
+    "PassportId": "AA123456"
+  },
+  {
+    "FirstName": "Olga",
+    "LastName": "Ivanova",
+    "Course": 2,
+    "StudentId": "KB654321",
+    "ArrivalCity": "Lviv",
+    "PassportId": "BB654321"
+  },
+  {
+    "FirstName": "Ivan",
+    "LastName": "Petrushkin",
+    "Course": 1,
+    "StudentId": "KB653321",
+    "ArrivalCity": "Kharkiv",
+    "PassportId": "BB654391"
+  }
+]
