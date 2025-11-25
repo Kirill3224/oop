@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "\u0407\u0436\u0430",
+    "Brand": "Reva",
+    "Price": 40,
+    "Quantity": 500,
+    "CategoryId": 1,
+    "Id": 1
+  },
+  {
+    "Name": "\u0428\u043E\u043A\u043E\u043A\u043E\u043B\u0430\u0434\u043D\u0438\u0439 \u0431\u0430\u0442\u043E\u043D\u0447\u0438\u043A",
+    "Brand": "Nenesquick",
+    "Price": 25,
+    "Quantity": 900,
+    "CategoryId": 1,
+    "Id": 3
+  }
+]

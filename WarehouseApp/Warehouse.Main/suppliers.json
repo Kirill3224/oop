@@ -1,0 +1,26 @@
+[
+  {
+    "FirstName": "\u0406\u0432\u0430\u043D ",
+    "LastName": "\u041D\u0435\u0447\u0438\u043F\u043E\u0440\u0435\u043D\u043A\u043E",
+    "Phone": "\u002B380906543462",
+    "Email": "supplier1@gmail.com",
+    "FullName": "\u0406\u0432\u0430\u043D  \u041D\u0435\u0447\u0438\u043F\u043E\u0440\u0435\u043D\u043A\u043E",
+    "Id": 1
+  },
+  {
+    "FirstName": "\u0422\u0430\u0440\u0430\u0441 ",
+    "LastName": "\u0428\u0435\u0432\u0447\u0435\u043D\u043A\u043E",
+    "Phone": "\u002B380112345689",
+    "Email": "SUPPLIER1@gmail.com",
+    "FullName": "\u0422\u0430\u0440\u0430\u0441  \u0428\u0435\u0432\u0447\u0435\u043D\u043A\u043E",
+    "Id": 2
+  },
+  {
+    "FirstName": "\u0421\u0442\u0430\u043D\u0456\u0441\u043B\u0430\u0432",
+    "LastName": "\u0413\u0443\u0440\u0442\u043E\u0432\u0438\u0439",
+    "Phone": "\u002B3809951134521",
+    "Email": "wfwfwef3@gmail.com",
+    "FullName": "\u0421\u0442\u0430\u043D\u0456\u0441\u043B\u0430\u0432 \u0413\u0443\u0440\u0442\u043E\u0432\u0438\u0439",
+    "Id": 3
+  }
+]
